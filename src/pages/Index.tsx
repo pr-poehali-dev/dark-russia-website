@@ -212,16 +212,59 @@ export default function Index() {
                 Тьма<br />поглотила<br />всё
               </h2>
               <p className="text-gray-400 leading-relaxed mb-6 text-lg">
-                DARK RUSSIA — это масштабная выживалка в открытом мире постапокалиптической России.
-                Исследуй заброшенные города, борись за ресурсы, создавай оружие из хлама.
+                DARK RUSSIA — это мир разборок. Дерись, зарабатывай, побеждай.
+                Игра находится в Telegram — заходи и начинай прямо сейчас.
               </p>
-              <p className="text-gray-400 leading-relaxed mb-8">
-                Каждый сервер — уникальная история. Кланы, предательства, союзы и войны.
-                Кто выживет — станет легендой.
-              </p>
+
+              {/* Ссылки проекта */}
+              <div className="mb-6 space-y-2">
+                <div className="text-xs tracking-[0.3em] text-[#FF6B1A] uppercase mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>Связи проекта</div>
+                {[
+                  { icon: "Send", label: "Telegram-канал", href: "https://t.me/duybarussiagamee" },
+                  { icon: "Globe", label: "Форум", href: "https://forum-darkrussia.sampproject.ru" },
+                  { icon: "Users", label: "ВК чат", href: "https://vk.me/join/I9LM97l0OGKJaRlBqOXo1" },
+                ].map((l) => (
+                  <a
+                    key={l.label}
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-4 py-2.5 border rounded-sm transition-all duration-300 hover:border-[#FF6B1A] hover:text-[#FF6B1A] group"
+                    style={{ borderColor: "#3d2810", background: "#140f08", color: "#9ca3af" }}
+                  >
+                    <Icon name={l.icon} fallback="Link" size={15} className="text-[#FF6B1A] flex-shrink-0" />
+                    <span className="text-sm">{l.label}</span>
+                    <Icon name="ExternalLink" size={12} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </a>
+                ))}
+              </div>
+
+              {/* Связи с владельцем */}
+              <div className="mb-8 space-y-2">
+                <div className="text-xs tracking-[0.3em] text-[#FF6B1A] uppercase mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>Связь с владельцем</div>
+                {[
+                  { icon: "Send", label: "Telegram", href: "https://t.me/Vv54VvV", sub: "@Vv54VvV" },
+                  { icon: "Users", label: "ВКонтакте", href: "https://vk.com/id1083357374", sub: "@id1083357374" },
+                ].map((l) => (
+                  <a
+                    key={l.label}
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-4 py-2.5 border rounded-sm transition-all duration-300 hover:border-[#FF6B1A] hover:text-[#FF6B1A] group"
+                    style={{ borderColor: "#3d2810", background: "#140f08", color: "#9ca3af" }}
+                  >
+                    <Icon name={l.icon} fallback="Link" size={15} className="text-[#FF6B1A] flex-shrink-0" />
+                    <span className="text-sm">{l.label}</span>
+                    <span className="text-xs text-gray-600 ml-1">{l.sub}</span>
+                    <Icon name="ExternalLink" size={12} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </a>
+                ))}
+              </div>
+
               <div className="flex items-center gap-3">
                 <div className="h-px flex-1" style={{ background: "linear-gradient(to right, #FF6B1A, transparent)" }} />
-                <span className="text-xs tracking-widest text-[#FF6B1A] uppercase" style={{ fontFamily: "'Oswald', sans-serif" }}>Версия 2.4</span>
+                <span className="text-xs tracking-widest text-[#FF6B1A] uppercase" style={{ fontFamily: "'Oswald', sans-serif" }}>В Telegram</span>
               </div>
             </div>
 
