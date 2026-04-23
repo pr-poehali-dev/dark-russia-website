@@ -232,7 +232,7 @@ export default function Index() {
                   className="p-6 rounded-sm border transition-all duration-300 hover:border-[#FF6B1A]/50 hover:scale-105 cursor-default group"
                   style={{ background: "#1a1208", borderColor: "#3d2810" }}
                 >
-                  <Icon name={f.icon as any} size={28} className="text-[#FF6B1A] mb-3 group-hover:scale-110 transition-transform" />
+                  <Icon name={f.icon} fallback="Star" size={28} className="text-[#FF6B1A] mb-3 group-hover:scale-110 transition-transform" />
                   <h3 className="font-semibold text-white text-lg mb-2 uppercase" style={{ fontFamily: "'Oswald', sans-serif" }}>{f.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
                 </div>
@@ -274,7 +274,7 @@ export default function Index() {
                   borderColor: p.primary ? "#FF6B1A" : "#3d2810",
                 }}
               >
-                <Icon name={p.icon as any} size={32} className={p.primary ? "text-black" : "text-[#FF6B1A]"} />
+                <Icon name={p.icon} fallback="Download" size={32} className={p.primary ? "text-black" : "text-[#FF6B1A]"} />
                 <div>
                   <div className="font-bold text-xl uppercase" style={{ fontFamily: "'Oswald', sans-serif", color: p.primary ? "#000" : "#fff" }}>{p.label}</div>
                   <div className="text-xs" style={{ color: p.primary ? "rgba(0,0,0,0.6)" : "#6b7280" }}>{p.sub}</div>
