@@ -103,10 +103,13 @@ export default function Index() {
           ))}
         </div>
         <a
-          href="#download"
-          className="hidden md:block text-sm tracking-widest px-5 py-2 uppercase font-semibold transition-all duration-300 hover:scale-105"
+          href="https://t.me/Vv54VvV"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:flex items-center gap-2 text-sm tracking-widest px-5 py-2 uppercase font-semibold transition-all duration-300 hover:scale-105"
           style={{ background: "#FF6B1A", color: "#000", fontFamily: "'Oswald', sans-serif" }}
         >
+          <Icon name="Send" size={14} />
           Играть
         </a>
       </nav>
@@ -162,11 +165,14 @@ export default function Index() {
             style={{ animationDelay: "1s", animationFillMode: "forwards" }}
           >
             <a
-              href="#download"
-              className="text-lg tracking-widest px-10 py-4 uppercase font-semibold transition-all duration-300 hover:scale-105"
-              style={{ background: "#FF6B1A", color: "#000", fontFamily: "'Oswald', sans-serif", boxShadow: "0 0 30px rgba(255,107,26,0.4)" }}
+              href="https://t.me/Vv54VvV"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-lg tracking-widest px-10 py-4 uppercase font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              style={{ background: "#FF6B1A", color: "#000", fontFamily: "'Oswald', sans-serif", boxShadow: "0 0 30px rgba(255,107,26,0.5)" }}
             >
-              Скачать бесплатно
+              <Icon name="Send" size={20} />
+              Играть в Telegram
             </a>
             <a
               href="#about"
