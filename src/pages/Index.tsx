@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/a07f6b93-f9cc-4816-95f5-235cc9f24dcc/files/42655019-6d66-44c9-a69d-d71f0dac1518.jpg";
@@ -7,7 +7,6 @@ const NAV_LINKS = [
   { label: "Главная", href: "#hero" },
   { label: "О игре", href: "#about" },
   { label: "Скачать", href: "#download" },
-  { label: "Сообщество", href: "#community" },
 ];
 
 const FEATURES = [
@@ -33,48 +32,10 @@ const FEATURES = [
   },
 ];
 
-const FORUM_POSTS = [
-  {
-    author: "DarkWolf_666",
-    avatar: "🐺",
-    title: "Гайд по выживанию в Зоне Отчуждения",
-    replies: 147,
-    views: "12K",
-    time: "2 часа назад",
-    tag: "Гайды",
-  },
-  {
-    author: "Сталкер_Ру",
-    avatar: "☢️",
-    title: "Лучшие локации для фарма в 2.4",
-    replies: 89,
-    views: "8.3K",
-    time: "5 часов назад",
-    tag: "Геймплей",
-  },
-  {
-    author: "NightRaider",
-    avatar: "🔥",
-    title: "Клан [TEMNOTA] набирает бойцов",
-    replies: 203,
-    views: "15K",
-    time: "1 день назад",
-    tag: "Кланы",
-  },
-  {
-    author: "Выживший_777",
-    avatar: "💀",
-    title: "Баги патча 2.4.1 — собираем список",
-    replies: 312,
-    views: "22K",
-    time: "3 дня назад",
-    tag: "Баги",
-  },
-];
+
 
 export default function Index() {
-  const [activePost, setActivePost] = useState<number | null>(null);
-  const [forumText, setForumText] = useState("");
+
 
   return (
     <div className="min-h-screen bg-[#0d0a08] text-gray-100 overflow-x-hidden" style={{ fontFamily: "'Roboto', sans-serif" }}>
@@ -341,95 +302,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* COMMUNITY / FORUM */}
-      <section id="community" className="py-32 px-8 relative">
-        <div className="absolute inset-0 opacity-20" style={{ background: "radial-gradient(ellipse at bottom left, rgba(255,107,26,0.15) 0%, transparent 60%)" }} />
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-            <div>
-              <div className="text-xs tracking-[0.4em] text-[#FF6B1A] uppercase mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>— Сообщество</div>
-              <h2 className="font-bold text-5xl md:text-6xl uppercase leading-tight text-white" style={{ fontFamily: "'Oswald', sans-serif" }}>
-                Форум<br />выживших
-              </h2>
-            </div>
-            <div className="flex gap-4">
-              {[
-                { val: "18K", label: "Тем" },
-                { val: "142K", label: "Сообщений" },
-                { val: "89", label: "Онлайн" },
-              ].map((s) => (
-                <div key={s.label} className="text-center p-4 border rounded-sm" style={{ background: "#1a1208", borderColor: "#3d2810" }}>
-                  <div className="font-bold text-2xl text-[#FF6B1A]" style={{ fontFamily: "'Oswald', sans-serif" }}>{s.val}</div>
-                  <div className="text-gray-500 text-xs uppercase tracking-widest">{s.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
 
-          <div className="space-y-2 mb-10">
-            {FORUM_POSTS.map((post, i) => (
-              <div
-                key={i}
-                onClick={() => setActivePost(activePost === i ? null : i)}
-                className="flex items-center gap-4 p-5 border rounded-sm cursor-pointer transition-all duration-300 hover:border-[#FF6B1A]/50 group"
-                style={{
-                  background: activePost === i ? "#1f1408" : "#140f08",
-                  borderColor: activePost === i ? "#FF6B1A" : "#2a1a08",
-                }}
-              >
-                <div className="text-2xl flex-shrink-0">{post.avatar}</div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span
-                      className="text-xs px-2 py-0.5 rounded-sm uppercase tracking-widest"
-                      style={{ background: "rgba(255,107,26,0.2)", color: "#FF6B1A", fontFamily: "'Oswald', sans-serif" }}
-                    >
-                      {post.tag}
-                    </span>
-                    <span className="text-gray-600 text-xs">{post.time}</span>
-                  </div>
-                  <h3 className="font-medium text-white group-hover:text-[#FF6B1A] transition-colors truncate">
-                    {post.title}
-                  </h3>
-                  <span className="text-gray-600 text-xs">от <span className="text-gray-400">{post.author}</span></span>
-                </div>
-                <div className="hidden sm:flex flex-col items-end gap-1 flex-shrink-0">
-                  <div className="flex items-center gap-1 text-gray-500 text-xs">
-                    <Icon name="MessageSquare" size={12} />
-                    <span>{post.replies}</span>
-                  </div>
-                  <div className="flex items-center gap-1 text-gray-600 text-xs">
-                    <Icon name="Eye" size={12} />
-                    <span>{post.views}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="p-6 border rounded-sm" style={{ background: "#140f08", borderColor: "#3d2810" }}>
-            <h3 className="font-semibold text-white text-lg uppercase mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>
-              <Icon name="Plus" size={18} className="inline text-[#FF6B1A] mr-2" />
-              Написать на форуме
-            </h3>
-            <textarea
-              value={forumText}
-              onChange={(e) => setForumText(e.target.value)}
-              placeholder="Поделись опытом, задай вопрос или предложи идею..."
-              className="w-full p-4 rounded-sm text-gray-300 placeholder-gray-600 resize-none focus:outline-none transition-colors text-sm"
-              style={{ background: "#0d0a08", border: "1px solid #3d2810", minHeight: "100px" }}
-            />
-            <div className="flex justify-end mt-3">
-              <button
-                className="text-sm tracking-widest px-6 py-3 uppercase font-semibold transition-all duration-300 hover:scale-105"
-                style={{ background: "#FF6B1A", color: "#000", fontFamily: "'Oswald', sans-serif" }}
-              >
-                Опубликовать
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FOOTER */}
       <footer className="py-12 px-8 border-t" style={{ borderColor: "#1f1208", background: "#0a0704" }}>
