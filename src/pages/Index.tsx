@@ -308,27 +308,17 @@ export default function Index() {
             Бесплатно. Без регистрации. Просто скачай и погрузись в тьму.
           </p>
 
-          <div className="grid sm:grid-cols-3 gap-4 mb-12">
-            {[
-              { icon: "Monitor", label: "Windows", sub: "Windows 10/11 · 64-bit", primary: true },
-              { icon: "Apple", label: "macOS", sub: "macOS 12+ · M1/Intel", primary: false },
-              { icon: "Cpu", label: "Linux", sub: "Ubuntu 20.04+", primary: false },
-            ].map((p) => (
-              <button
-                key={p.label}
-                className="flex flex-col items-center gap-3 p-6 border rounded-sm transition-all duration-300 hover:scale-105 hover:border-[#FF6B1A]"
-                style={{
-                  background: p.primary ? "#FF6B1A" : "#1a1208",
-                  borderColor: p.primary ? "#FF6B1A" : "#3d2810",
-                }}
-              >
-                <Icon name={p.icon} fallback="Download" size={32} className={p.primary ? "text-black" : "text-[#FF6B1A]"} />
-                <div>
-                  <div className="font-bold text-xl uppercase" style={{ fontFamily: "'Oswald', sans-serif", color: p.primary ? "#000" : "#fff" }}>{p.label}</div>
-                  <div className="text-xs" style={{ color: p.primary ? "rgba(0,0,0,0.6)" : "#6b7280" }}>{p.sub}</div>
-                </div>
-              </button>
-            ))}
+          <div className="flex justify-center mb-12">
+            <a
+              href="https://t.me/Vv54VvV"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-xl tracking-widest px-12 py-5 uppercase font-semibold transition-all duration-300 hover:scale-105"
+              style={{ background: "#FF6B1A", color: "#000", fontFamily: "'Oswald', sans-serif", boxShadow: "0 0 40px rgba(255,107,26,0.5)" }}
+            >
+              <Icon name="Send" size={24} />
+              Играть в Telegram
+            </a>
           </div>
 
           <div className="flex flex-col items-center gap-2">
