@@ -149,4 +149,37 @@
   .delay-1000 {
     animation-delay: 1s;
   }
+
+  .rainbow-border {
+    position: relative;
+    background: #140f08;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+  }
+  .rainbow-border::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      #ff6b1a,
+      #ff2200,
+      #ff9900,
+      #ffd700,
+      #ff6b1a
+    );
+    background-size: 300% 100%;
+    animation: rainbow-shift 3s linear infinite;
+    z-index: -1;
+  }
+}
+
+@keyframes rainbow-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
 }
