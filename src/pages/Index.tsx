@@ -227,7 +227,6 @@ export default function Index() {
                 <div className="text-xs tracking-[0.3em] text-[#FF6B1A] uppercase mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>Связи проекта</div>
                 {[
                   { icon: "Send", label: "Telegram-канал", href: "https://t.me/duybarussiagamee" },
-                  { icon: "Globe", label: "Форум", href: "https://forum-darkrussia.sampproject.ru" },
                   { icon: "Users", label: "ВК чат", href: "https://vk.me/join/I9LM97l0OGKJaRlBqOXo1" },
                 ].map((l) => (
                   <a
