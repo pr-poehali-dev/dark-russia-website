@@ -256,8 +256,8 @@ export default function Index() {
                     href={l.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-4 py-2.5 border rounded-sm transition-all duration-300 hover:border-[#FF6B1A] hover:text-[#FF6B1A] group"
-                    style={{ borderColor: "#3d2810", background: "#140f08", color: "#9ca3af" }}
+                    className="rainbow-border flex items-center gap-3 px-4 py-2.5 rounded-sm transition-all duration-300 hover:text-[#FF6B1A] group"
+                    style={{ color: "#9ca3af" }}
                   >
                     <Icon name={l.icon} fallback="Link" size={15} className="text-[#FF6B1A] flex-shrink-0" />
                     <span className="text-sm">{l.label}</span>
