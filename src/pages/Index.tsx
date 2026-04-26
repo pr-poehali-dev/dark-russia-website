@@ -310,14 +310,14 @@ export default function Index() {
 
           <div className="flex justify-center mb-12">
             <a
-              href="https://t.me/Vv54VvV"
+              href="https://disk.yandex.ru/d/SDUyBQ9UqJhC7Q"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-xl tracking-widest px-12 py-5 uppercase font-semibold transition-all duration-300 hover:scale-105"
               style={{ background: "#FF6B1A", color: "#000", fontFamily: "'Oswald', sans-serif", boxShadow: "0 0 40px rgba(255,107,26,0.5)" }}
             >
-              <Icon name="Send" size={24} />
-              Играть в Telegram
+              <Icon name="Download" size={24} />
+              Скачать с Яндекс Диска
             </a>
           </div>
 
