@@ -9,28 +9,7 @@ const NAV_LINKS = [
   { label: "Скачать", href: "#download" },
 ];
 
-const FEATURES = [
-  {
-    icon: "Map",
-    title: "Открытый мир",
-    desc: "Огромные территории постсоветской России — от сгоревших деревень до радиоактивных мегаполисов.",
-  },
-  {
-    icon: "Sword",
-    title: "Выживание",
-    desc: "Голод, холод, радиация и враги. Каждый день — борьба за жизнь в жестоком мире.",
-  },
-  {
-    icon: "Users",
-    title: "Кланы",
-    desc: "Объединяйся с другими выжившими, создавай кланы, захватывай территории.",
-  },
-  {
-    icon: "Skull",
-    title: "PvP-зоны",
-    desc: "Зоны повышенной опасности с лучшим лутом. Выживет сильнейший.",
-  },
-];
+
 
 
 
@@ -234,18 +213,13 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              {FEATURES.map((f) => (
-                <div
-                  key={f.title}
-                  className="p-6 rounded-sm border transition-all duration-300 hover:border-[#FF6B1A]/50 hover:scale-105 cursor-default group"
-                  style={{ background: "#1a1208", borderColor: "#3d2810" }}
-                >
-                  <Icon name={f.icon} fallback="Star" size={28} className="text-[#FF6B1A] mb-3 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-semibold text-white text-lg mb-2 uppercase" style={{ fontFamily: "'Oswald', sans-serif" }}>{f.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
-                </div>
-              ))}
+            <div className="flex items-center justify-center">
+              <img
+                src="https://cdn.poehali.dev/projects/a07f6b93-f9cc-4816-95f5-235cc9f24dcc/bucket/e597ff3c-d23b-4e4f-9654-11c67ec8ec37.jpg"
+                alt="Dark Russia"
+                className="w-full max-w-md rounded-full"
+                style={{ boxShadow: "0 0 60px rgba(255,107,26,0.4)" }}
+              />
             </div>
           </div>
         </div>
