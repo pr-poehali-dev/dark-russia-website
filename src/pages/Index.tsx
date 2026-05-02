@@ -134,7 +134,7 @@ export default function Index() {
       <div style={{ background: "#FF6B1A" }} className="py-4 px-8">
         <div className="max-w-5xl mx-auto flex flex-wrap items-center justify-around gap-4">
           {[
-            { value: "250K+", label: "Игроков" },
+            { value: "25+", label: "Онлайн" },
             { value: "Free", label: "Скачивание" },
           ].map((s) => (
             <div key={s.label} className="text-center">
