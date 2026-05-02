@@ -183,3 +183,31 @@
     background-position: 300% 50%;
   }
 }
+
+@keyframes shimmer-text {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.title-shimmer {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #ff6b1a 20%,
+    #ffd700 35%,
+    #ff2200 50%,
+    #ff6b1a 65%,
+    #ffffff 80%,
+    #ff6b1a 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer-text 3s linear infinite;
+  filter: drop-shadow(0 0 40px rgba(255, 107, 26, 0.5));
+}
