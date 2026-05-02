@@ -135,8 +135,6 @@ export default function Index() {
         <div className="max-w-5xl mx-auto flex flex-wrap items-center justify-around gap-4">
           {[
             { value: "250K+", label: "Игроков" },
-            { value: "4.8★", label: "Рейтинг" },
-            { value: "180+", label: "Локаций" },
             { value: "Free", label: "Скачивание" },
           ].map((s) => (
             <div key={s.label} className="text-center">
