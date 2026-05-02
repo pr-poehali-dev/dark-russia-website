@@ -230,8 +230,19 @@ export default function Index() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="text-xs tracking-[0.4em] text-[#FF6B1A] uppercase mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>— Скачать</div>
-          <h2 className="font-bold text-5xl md:text-7xl uppercase leading-tight text-white mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>
-            Начни<br />выживать
+          <h2
+            className="font-bold text-5xl md:text-7xl uppercase leading-tight mb-6"
+            style={{
+              fontFamily: "'Oswald', sans-serif",
+              background: "linear-gradient(90deg, #ffffff 0%, #FF6B1A 20%, #ffd700 35%, #ff2200 50%, #FF6B1A 65%, #ffffff 80%, #FF6B1A 100%)",
+              backgroundSize: "200% auto",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              animation: "shimmer-text 3s linear infinite",
+            }}
+          >
+            Начни развиваться<br />на DARK RUSSIA
           </h2>
           <p className="text-gray-400 text-xl mb-12 max-w-2xl mx-auto">
             Бесплатно. Без регистрации. Просто скачай и погрузись в тьму.
