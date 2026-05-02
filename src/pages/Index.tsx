@@ -68,11 +68,7 @@ export default function Index() {
         />
 
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-          <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
-            <div className="inline-block mb-6 px-4 py-1 border border-[#FF6B1A]/50 text-xs tracking-[0.4em] text-[#FF6B1A] uppercase" style={{ fontFamily: "'Oswald', sans-serif" }}>
-              ☢ Пост-апокалипсис · Выживание · Открытый мир
-            </div>
-          </div>
+
 
           <h1
             className="font-bold uppercase leading-none mb-6"
