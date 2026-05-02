@@ -96,13 +96,18 @@ export default function Index() {
           </div>
 
           <h1
-            className="font-bold uppercase leading-none mb-6 animate-fade-in opacity-0 title-shimmer"
+            className="font-bold uppercase leading-none mb-6"
             style={{
               fontFamily: "'Oswald', sans-serif",
               fontSize: "clamp(4rem, 12vw, 10rem)",
               letterSpacing: "-0.02em",
-              animationDelay: "0.4s",
-              animationFillMode: "forwards",
+              background: "linear-gradient(90deg, #ffffff 0%, #FF6B1A 20%, #ffd700 35%, #ff2200 50%, #FF6B1A 65%, #ffffff 80%, #FF6B1A 100%)",
+              backgroundSize: "200% auto",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              animation: "shimmer-text 3s linear infinite",
+              filter: "drop-shadow(0 0 40px rgba(255,107,26,0.5))",
             }}
           >
             DARK<br />RUSSIA
