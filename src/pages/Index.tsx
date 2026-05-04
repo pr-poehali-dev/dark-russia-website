@@ -250,7 +250,7 @@ export default function Index() {
 
           <div className="flex justify-center mb-12">
             <a
-              href="https://disk.yandex.ru/d/SDUyBQ9UqJhC7Q"
+              href="https://disk.yandex.ru/d/6FLXTZ6TzStNFQ"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-xl tracking-widest px-12 py-5 uppercase font-semibold transition-all duration-300 hover:scale-105"
