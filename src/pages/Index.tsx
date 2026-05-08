@@ -207,12 +207,18 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="flex items-center justify-center">
+            <div className="flex flex-col items-center gap-6">
               <img
                 src="https://cdn.poehali.dev/projects/a07f6b93-f9cc-4816-95f5-235cc9f24dcc/bucket/e597ff3c-d23b-4e4f-9654-11c67ec8ec37.jpg"
                 alt="Dark Russia"
                 className="w-full max-w-md rounded-full"
                 style={{ boxShadow: "0 0 60px rgba(255,107,26,0.4)" }}
+              />
+              <img
+                src="https://cdn.poehali.dev/projects/a07f6b93-f9cc-4816-95f5-235cc9f24dcc/bucket/8af6f567-daa3-4d4a-afba-b5db6aeb83f5.jpg"
+                alt="Dark Russia Gameplay"
+                className="w-full max-w-md rounded-sm"
+                style={{ boxShadow: "0 0 40px rgba(255,107,26,0.3)", border: "1px solid rgba(255,107,26,0.2)" }}
               />
             </div>
           </div>
