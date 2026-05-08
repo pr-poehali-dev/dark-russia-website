@@ -7,11 +7,11 @@
     --background: 10 10% 5%;
     --foreground: 30 20% 90%;
 
-    --orange: #ff6b1a;
-    --orange-dim: #cc4a00;
-    --dark-bg: #0d0a08;
-    --dark-card: #1a1208;
-    --dark-border: #3d2810;
+    --orange: #cc0000;
+    --orange-dim: #990000;
+    --dark-bg: #050508;
+    --dark-card: #0e0e14;
+    --dark-border: #2a0a0a;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -114,19 +114,19 @@
 
 @layer utilities {
   .text-orange {
-    color: #ff6b1a;
+    color: #cc0000;
   }
   .bg-orange {
-    background-color: #ff6b1a;
+    background-color: #cc0000;
   }
   .border-orange {
-    border-color: #ff6b1a;
+    border-color: #cc0000;
   }
   .glow-orange {
-    box-shadow: 0 0 30px rgba(255, 107, 26, 0.5);
+    box-shadow: 0 0 30px rgba(180, 0, 0, 0.6);
   }
   .text-shadow-orange {
-    text-shadow: 0 0 40px rgba(255, 107, 26, 0.8);
+    text-shadow: 0 0 40px rgba(180, 0, 0, 0.9);
   }
   .noise-bg {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
@@ -152,7 +152,7 @@
 
   .rainbow-border {
     position: relative;
-    background: #140f08;
+    background: #0e0e14;
     border: 1px solid transparent;
     background-clip: padding-box;
   }
@@ -163,11 +163,11 @@
     border-radius: inherit;
     background: linear-gradient(
       90deg,
-      #ff6b1a,
+      #cc0000,
+      #880000,
       #ff2200,
-      #ff9900,
-      #ffd700,
-      #ff6b1a
+      #660000,
+      #cc0000
     );
     background-size: 300% 100%;
     animation: rainbow-shift 3s linear infinite;
@@ -197,17 +197,17 @@
   background: linear-gradient(
     90deg,
     #ffffff 0%,
-    #ff6b1a 20%,
-    #ffd700 35%,
-    #ff2200 50%,
-    #ff6b1a 65%,
+    #cc0000 20%,
+    #ff4444 35%,
+    #880000 50%,
+    #cc0000 65%,
     #ffffff 80%,
-    #ff6b1a 100%
+    #cc0000 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: shimmer-text 3s linear infinite;
-  filter: drop-shadow(0 0 40px rgba(255, 107, 26, 0.5));
+  filter: drop-shadow(0 0 40px rgba(180, 0, 0, 0.6));
 }
